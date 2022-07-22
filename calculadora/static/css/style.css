@@ -3,8 +3,8 @@ body {
 }
 
 .box {
-    height: 150px;
-    width: 150px;
+    min-height: 150px;
+    min-width: 150px;
 }
 
 .triangulo {
@@ -13,4 +13,12 @@ body {
     border-style: solid;
     border-width: 8em 0 0 8em;
     border-color: transparent transparent transparent rgb(151, 235, 158);
+}
+
+.form-group{
+    margin: 18px 0;
+}
+
+.nav{
+    background-color: #ffffff;
 }

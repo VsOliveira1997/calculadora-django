@@ -13,109 +13,48 @@
 </head>
 
 <body>
-<div class="container">
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+<div class="container d-flex justify-content-center h-100 flex-column">
+    <ul class="nav nav-pills mb-3 p-3 border" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Hipotenusa
-            </button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Cateto B
-            </button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
-                    type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Cateto C
+            <button class="nav-link active" id="hipotenusa-tab" data-bs-toggle="pill" data-bs-target="#hipotenusa"
+                    type="button" role="tab" aria-controls="hipotenusa" aria-selected="true">Hipotenusa
             </button>
         </li>
     </ul>
-    <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+    <div class="tab-content w-100 border mt-3 mb-3 p-3 card" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="hipotenusa" role="tabpanel" aria-labelledby="hipotenusa-tab"
              tabindex="0">
             <div class="d-flex">
-                <div class="col-6">
+                <div class="col-6 mt-5 mb-5 d-flex justify-content-center">
                     <div class="box" id="box">
                         <div class="triangulo" id="triangulo"></div>
                     </div>
                 </div>
                 <div class="col-6">
-
                     <div class="form-group">
-                        <label for="a">A</label>
                         <input type="number" class="form-control" id="a"
                                onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
-                               min="1" placeholder="Example input">
+                               min="1" placeholder="A = Valor a ser descoberto" disabled>
                     </div>
                     <div class="form-group">
-                        <label for="b">B</label>
                         <input type="number" class="form-control" id="b"
                                onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
-                               min="1" placeholder="Another input">
+                               min="1" placeholder="B">
                     </div>
                     <div class="form-group">
-                        <label for="c">C</label>
                         <input type="number" class="form-control" id="c"
                                onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
-                               min="1" placeholder="Another input">
+                               min="1" placeholder="C">
                     </div>
-                    <a href="javascript:void(0)" class="btn btn-primary" onclick="teste()">Calcular</a>
+                    <a href="javascript:void(0)" class="btn btn-primary" onclick="hipotenusa()">Calcular</a>
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-            <div class="box" id="box">
-                <div class="triangulo" id="triangulo"></div>
-            </div>
-            <div class="form-group">
-                <label for="a">A</label>
-                <input type="number" class="form-control" id="a"
-                       onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
-                       min="1" placeholder="Example input">
-            </div>
-            <div class="form-group">
-                <label for="b">B</label>
-                <input type="number" class="form-control" id="b"
-                       onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
-                       min="1" placeholder="Another input">
-            </div>
-            <div class="form-group">
-                <label for="c">C</label>
-                <input type="number" class="form-control" id="c"
-                       onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
-                       min="1" placeholder="Another input">
-            </div>
-            <a href="javascript:void(0)" class="btn btn-primary" onclick="teste()">Calcular</a>
-        </div>
-        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
-            <div class="box" id="box">
-                <div class="triangulo" id="triangulo"></div>
-            </div>
-            <div class="form-group">
-                <label for="a">A</label>
-                <input type="number" class="form-control" id="a"
-                       onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
-                       min="1" placeholder="Example input">
-            </div>
-            <div class="form-group">
-                <label for="b">B</label>
-                <input type="number" class="form-control" id="b"
-                       onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
-                       min="1" placeholder="Another input">
-            </div>
-            <div class="form-group">
-                <label for="c">C</label>
-                <input type="number" class="form-control" id="c"
-                       onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
-                       min="1" placeholder="Another input">
-            </div>
-            <a href="javascript:void(0)" class="btn btn-primary" onclick="teste()">Calcular</a>
-        </div>
-
     </div>
-    <div id="result">
-
+    <div class="alert alert-success d-none" id="result" role="alert">
+    </div>
+    <div class="alert alert-danger d-none" role="alert" id="error">
+        Algo deu errado
     </div>
 </div>
 
