@@ -1,0 +1,16 @@
+body {
+    background-color: #f2f2f2;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+}
+
+.triangulo {
+    /* width: 0;
+    height: 0; */
+    border-style: solid;
+    border-width: 8em 0 0 8em;
+    border-color: transparent transparent transparent rgb(151, 235, 158);
+}
